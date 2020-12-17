@@ -58,7 +58,6 @@ catch {
     throw "Oracle login unsuccessful: $_"
   }
   $packageArgs.url = [regex]::Match($msg, '.*(http.*)\.').Groups[1].Value
-  $packageArgs.url = $packageArgs.url.Replace('http', 'https')
 }
 
 Write-Host 'Oracle login successful'
